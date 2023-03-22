@@ -1,0 +1,71 @@
+Wprowadzenie
+	1) 
+		git commit
+		git commit
+	2)
+		git checkout -b bugFix
+	3)
+		git checkout -b bugFix
+		git commit
+		git checkout main
+		git commit
+		git merge bugFix
+	4)
+		git checkout -b bugFix
+		git commit
+		git checkout main
+		git commit
+		git checkout bugFix
+		git rebase main
+Rozkręcenie
+	1)
+		git checkout c4
+	2)
+		git checkout bugFix^
+	3)
+		git checkout HEAD~1
+		git branch -f main c6
+		git branch -f bugFix c0
+	4)
+		git reset local~1
+		git checkout pushed
+		git revert pushed
+Przenoszenie pracy
+	1)
+		git cherry-pick C3 C4 C7
+	2)
+		git rebase -i overHere
+Po trochu wszystkiego
+	1)
+		git chekout main
+		git cherry-pick C4
+	2)
+		git rebase -i caption~2 --aboveAll
+		git commit --amend
+		git rebase -i caption~2 --aboveAll
+		git branch -f main caption
+	3)
+		git checkout main
+		git cherry-pick C2
+		git commit --amend
+		git cherry-pick C3
+	4)
+		git tag v0 C1
+		git tag v1 C2
+		git checkout C2
+	5)
+		git commit
+Tematy zaawansowane
+	1)
+		git rebase master bugFix
+		git rebase bugFix side
+		git rebase side another
+		git rebase another master
+	2)
+		git branch bugWork master~^2~
+	3)
+		git checkout one
+		git cherry-pick C4 C3 C2
+		git checkout two
+		git cherry-pick C5 C4 C3 C2
+		git branch -f three C2
